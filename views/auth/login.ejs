@@ -1,0 +1,80 @@
+<input type="hidden" value="<%=msg%>" id="msg">
+<div class="limiter">
+	<div class="container-login100">
+		<div class="wrap-login100">
+			<form class="login100-form validate-form" id="loginForm" method="post" action="/auth/login.do">
+				<span class="login100-form-title p-b-43">
+					로그인
+				</span>
+				
+				<div class="wrap-input100 validate-input" data-validate = "이메일 형식은 ex@abc.xyz와 같이 입력해 주세요">
+					<input class="input100" type="text" name="email" id="email">
+					<span class="focus-input100"></span>
+					<span class="label-input100">이메일</span>
+				</div>
+								
+				<div class="wrap-input100 validate-input" data-validate="비밀번호를 입력해 주세요">
+					<input class="input100" type="password" name="password" id="password">
+					<span class="focus-input100"></span>
+					<span class="label-input100">비밀번호</span>
+				</div>
+
+				<div class="flex-sb-m w-full p-t-3 p-b-32">
+					<div class="contact100-form-checkbox">
+						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+						<label class="label-checkbox100" for="ckb1">
+							아이디 저장
+						</label>
+					</div>					
+					<!-- <div>
+						<a href="#" class="txt1">
+							비밀번호 분실
+						</a>
+					</div> -->
+				</div>
+				<div style="height:30px;">
+					<span id="chkIdMsg" style="display:none; float:right;">
+						아이디는 30일간 저장됩니다.
+					</span>
+				</div>		
+				<!-- <c:if test="${not empty errormsg}">
+				<div class="mb10">
+					<p style="color : red;">${errormsg }</p>
+				</div>					
+				</c:if>				 -->
+				<div class="container-login100-form-btn">
+					<button type="button" id="loginBtn" class="login100-form-btn">
+						로그인
+					</button>
+				</div>
+				
+				<div cla1s="text-center p-t-46 p-b-20 lgBtn1">
+					<span class="txt2">
+						<a href="/auth/join.do">가입하기</a>
+					</span>
+					<br>
+					<span class="txt2">
+						<a href="/auth/forgetEmail.do">이메일 찾기</a>
+					</span>
+					<br>
+					<span class="txt2">
+						<a href="/auth/forgetPassword.do">비밀번호 초기화</a>
+					</span>
+				</div>
+
+
+				<div class="login100-form-social flex-c-m">
+					<a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
+						<i class="fa fa-facebook-f" aria-hidden="true"></i>
+					</a>
+
+					<a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+				</div>			
+			</form>
+			<div class="login100-more" style="background-image: url('/images/login/images/bg-01.jpg');">
+			</div>
+		</div>
+	</div>
+</div>

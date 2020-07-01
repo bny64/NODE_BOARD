@@ -1,0 +1,30 @@
+{
+    "authLayout" : 
+        {
+            "layoutName" : "auth_layout/layout",
+            "headerInclude" : "./headerInclude",
+            "layoutBody" : "../"
+        },
+    "layout1" : {
+        "layoutName" : "main_layout/layout1",
+        "headerInclude" : "./headerInclude",
+        "layoutRow_0" : "./row_0",
+        "layoutRow_1" : "./row_1",
+        "layoutOverlay1" : "./overlay1",
+        "layoutBody" : "..",
+        "layoutGradient" : "./gradient",
+        "layoutRow_4" : "./row_4",
+        "layoutRow_5" : "./row_5"
+    },
+    "layout2" : {
+        "layoutName" : "main_layout/layout1",
+        "headerInclude" : "./headerInclude",
+        "layoutRow_0" : "./row_0",
+        "layoutRow_1" : "./row_1",
+        "layoutOverlay1" : "./overlay2",
+        "layoutBody" : "../menu",
+        "layoutGradient" : "./gradient",
+        "layoutRow_4" : "./row_4",
+        "layoutRow_5" : "./row_5"
+    }
+}

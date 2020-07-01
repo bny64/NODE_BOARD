@@ -1,0 +1,25 @@
+<div class="wrapper row0">
+    <div id="topbar" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div class="fl_left">
+        <ul class="nospace">
+          <li><a href="/index.do"><i class="fas fa-home fa-lg"></i></a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <% if(typeof jwt !== 'undefined'){ %>
+            <li><a id="logout" href="javascript:void(0);">Logout</a></li>
+          <% }else{ %>
+            <li><a href="/auth/login.do">Login</a></li>
+            <li><a href="/auth/join.do">Register</a></li>
+          <% } %>          
+        </ul>
+      </div>
+      <div class="fl_right">
+        <ul class="nospace">
+          <li><i class="fas fa-phone rgtspace-5"></i> +00 (123) 456 7890</li>
+          <li><i class="fas fa-envelope rgtspace-5"></i> nodejs@board.com</li>
+        </ul>
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
