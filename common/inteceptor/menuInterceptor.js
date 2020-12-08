@@ -1,4 +1,4 @@
-const menuListService = require('../menuList/MenuListService');
+const menuListService = require('../menuList/menuListService');
 
 module.exports = async function(req, res, next){
 

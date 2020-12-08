@@ -10,15 +10,15 @@ const msgBox = require('../common/msgBox/msg');
 
 router.get('/boardList.do', wrapAsync(async(req, res, next) => {
 
-    try{
-        
+    try {
+
         const returnVal = req.commandMap;
         const layoutInfo = layoutUtil.getLayout(req);
         Object.assign(returnVal, layoutInfo);
-    
+
         res.render(layoutInfo.layoutName, returnVal);
 
-    }catch(error){
+    } catch (error) {
         throw error;
     }
 
@@ -26,23 +26,23 @@ router.get('/boardList.do', wrapAsync(async(req, res, next) => {
 
 router.post('/boardList.do', wrapAsync(async(req, res, next) => {
 
-    try{
-        
+    try {
+
         const returnVal = req.commandMap;
 
         const parameters = req.commandMap.get('params');
         let thumbPath = fileUtil.parseName('imgFileThumbUrl_1');
-                
+
         const boards = await boardService.getBoardList(parameters);
 
-        for(let i=0; i<boards.length; i++){
+        for (let i = 0; i < boards.length; i++) {
 
             const board = boards[i];
             let fileName = board.fileName;
 
-            if(fileName){
+            if (fileName) {
                 board.thumbImgFilePath = thumbPath + '/file';
-            }else{
+            } else {
                 board.thumbImgFilePath = thumbPath + '/dflt';
                 board.thumbFileName = 'default.jpg';
             }
@@ -56,15 +56,15 @@ router.post('/boardList.do', wrapAsync(async(req, res, next) => {
 
         res.send(returnVal);
 
-    }catch(error){
+    } catch (error) {
         throw error;
     }
 
 }));
 
-router.post('/getNumOfBoards.do', wrapAsync(async(req, res, next)=>{
+router.post('/getNumOfBoards.do', wrapAsync(async(req, res, next) => {
 
-    try{
+    try {
 
         const returnVal = req.commandMap;
 
@@ -76,30 +76,30 @@ router.post('/getNumOfBoards.do', wrapAsync(async(req, res, next)=>{
 
         res.send(returnVal);
 
-    }catch(error){
+    } catch (error) {
 
         throw error;
     }
 
 }))
 
-router.get('/registBoard.do', wrapAsync(async(req, res, next)=>{
-    
-    try{
-        
+router.get('/registBoard.do', wrapAsync(async(req, res, next) => {
+
+    try {
+
         const returnVal = req.commandMap;
         const layoutInfo = layoutUtil.getLayout(req);
         Object.assign(returnVal, layoutInfo);
-    
+
         res.render(layoutInfo.layoutName, returnVal);
 
-    }catch(error){
+    } catch (error) {
         throw error;
     }
-    
+
 }));
 
-router.post('/registBoard.do', wrapAsync(async(req, res, next)=>{
+router.post('/registBoard.do', wrapAsync(async(req, res, next) => {
 
     fileUtil.saveDateFiles('imgFile_1', req);
 
